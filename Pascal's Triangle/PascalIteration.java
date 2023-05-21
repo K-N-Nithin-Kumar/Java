@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PascalIter {
+public class PascalIteration {
 
     static int nCr(int n, int r) {
         int res = 1;
