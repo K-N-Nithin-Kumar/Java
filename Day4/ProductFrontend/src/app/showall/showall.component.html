@@ -1,0 +1,42 @@
+<nz-input-group class="submitbutton1" [nzSuffix]="suffixIconSearch">
+  <input type="text" nz-input [(ngModel)]="searchText" placeholder="input search text"(ngModelChange)="search($event)"/>
+</nz-input-group>
+
+
+<ng-template #suffixIconSearch>
+  <i nz-icon nzType="search"></i>
+</ng-template>
+<nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzCustomFilter>
+        Name
+        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+          <span nz-icon nzType="search"></span>
+        </nz-filter-trigger>
+      </th>
+      <th>Type</th>
+      <th>Place</th>
+      <th>Warranty</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of nzTable.data">
+      <td>{{ data.name }}</td>
+      <td>{{ data.type }}</td>
+      <td>{{ data.place}}</td>
+      <td>{{ data.warranty}}</td>
+      <td> <button nz-button nzType="primary"(click)="deleteroute(data.id)" nzDanger>Delete</button></td>
+    </tr>
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" nzType="primary" class="search-button">Search</button>
+      <button nz-button nzSize="small" >Reset</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

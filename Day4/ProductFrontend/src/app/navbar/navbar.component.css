@@ -1,0 +1,48 @@
+.layout1{
+  border: 3px green;
+}
+
+body
+{
+    padding-top: 70px;
+}
+      .logo {
+        width: 100px;
+        height: 31px;
+        float: right;
+      
+       
+      }
+
+      nz-header {
+        position: fixed;
+        width: 100%;
+        text-align: center;
+       
+       
+      }
+
+      [nz-menu] {
+        line-height: 60px;
+        align-items: center;
+      }
+
+      nz-content {
+        padding: 0 30px;
+        padding-top: 10px;
+        margin-top: 64px;
+       
+      }
+   
+
+      .inner-content {
+        background: #fff;
+        padding: 24px;
+       height: 800px;
+       padding-top: 24px;
+      }
+
+      nz-footer {
+        text-align: center;
+      }
+     
