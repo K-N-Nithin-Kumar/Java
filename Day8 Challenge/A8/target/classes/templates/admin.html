@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Question</title>
+</head>
+<body>
+<form th:action="@{/adminsubmit}" th:method="post" th:object="${Question}">
+  <input type="text" th:field="*{question}" placeholder="Question">
+  <br>
+  <input type="text" th:field="*{op1}" placeholder="Option 1">
+  <input type="text" th:field="*{op2}" placeholder="Option 2">
+  <input type="text" th:field="*{op3}" placeholder="Option 3">
+  <input type="text" th:field="*{op4}" placeholder="Option 4">
+  <br>
+  <input type="text" th:field="*{answer}" placeholder="Answer">
+  <input type="text" th:field="*{technology}" placeholder="Technology">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
